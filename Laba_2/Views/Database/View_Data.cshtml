@@ -1,0 +1,34 @@
+﻿@model Laba_2.Models.Person
+
+@{
+    Layout = "~/Views/__BasicLayout.cshtml";
+    ViewBag.Title = "Созданный аккаунт";
+}
+
+<h2>Созданный аккаунт:</h2>
+
+<div class="account-info">
+    @Html.LabelFor(model => model.Name)
+    @Html.DisplayFor(model => model.Name)
+
+    @Html.LabelFor(model => model.BirthDate)
+    @Html.DisplayFor(model => model.BirthDate)
+
+    @Html.LabelFor(model => model.Height)
+    @Html.DisplayFor(model => model.Height)
+
+    @Html.LabelFor(model => model.Phone)
+    @Html.DisplayFor(model => model.Phone)
+
+    @Html.LabelFor(model => model.Email)
+    @Html.DisplayFor(model => model.Email)
+
+    @Html.LabelFor(model => model.Password)
+    @Html.DisplayFor(model => model.Password)
+
+    @Html.LabelFor(model => model.work)
+    @Html.DisplayFor(model => model.work)
+</div>
+
+<p class="hyperlink">@Html.ActionLink("Перейти к созданию", "Creat_Data")</p>
+<p class="hyperlink">@Html.ActionLink("База Данных", "Data_Base")</p>

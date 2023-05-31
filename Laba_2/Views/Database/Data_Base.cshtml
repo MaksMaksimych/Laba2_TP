@@ -1,0 +1,50 @@
+﻿@model List<Laba_2.Models.Person>
+@using Laba_2.external_method
+
+@{
+    Layout = "~/Views/__BasicLayout.cshtml";
+    ViewBag.Title = "Data Base";
+}
+
+@helper ListArray(List<Laba_2.Models.Person> Model)
+{
+    foreach (var person in Model)
+    {
+        <tr>
+            <td>@person.PersonId</td>
+            <td>@person.Name</td>
+            <td>@person.BirthDate</td>
+            <td>@person.Height</td>
+            <td>@person.Phone</td>
+            <td>@person.Email</td>
+            <td>@(person.work ? "Yes" : "No")</td>
+        </tr>
+    }
+}
+
+<h2>Data Base</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ФИО</th>
+            <th>Дата Рождения</th>
+            <th>Рост</th>
+            <th>Телефон</th>
+            <th>Email</th>
+            <th>Наличие работы</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if ((bool)ViewData["method"])
+        {
+            @Html.ListArrayItems(Model)
+        }
+        else
+        {
+            @ListArray(Model);
+        }
+    </tbody>
+</table>
+<p class="hyperlink">@Html.ActionLink("Создать аккаунт", "Creat_Data")</p>

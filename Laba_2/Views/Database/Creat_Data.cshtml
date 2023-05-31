@@ -1,0 +1,18 @@
+﻿@model Laba_2.Models.Person
+
+@{
+    Layout = "~/Views/__BasicLayout.cshtml";
+    ViewBag.Title = "CreatePerson";
+}
+
+<h2>Создание аккаунта:</h2>
+
+@using (Html.BeginForm("View_Data", "Database", FormMethod.Post))
+{
+    @Html.LabelForModel()
+    @Html.EditorForModel()
+
+    <button type="submit">Создать</button>
+}
+
+    

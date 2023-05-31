@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <style>
+        table {
+        width: 100%;
+        }
+
+        table th,
+        table td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        }
+
+        /* Стиль заголовков таблицы */
+        table th {
+        background-color: #f2f2f2;
+        color: #444;
+        }
+
+        /* Стиль гиперссылок */
+        .hyperlink {
+        margin-top: 20px;
+        }
+
+        /* Стиль блока с информацией аккаунта */
+        .account-info {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-top: 20px;
+        width: 50%;
+        }
+
+        .account-info label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+        }
+
+        .account-info span {
+        display: block;
+        margin-bottom: 20px;
+        }
+
+        /* Стиль кнопки создания аккаунта */
+        button[type="submit"] {
+        background-color: #007bff;
+        border: none;
+        color: #fff;
+        padding: 8px 16px;
+        text-align: center;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-top: 20px;
+        }
+
+        button[type="submit"]:hover {
+        background-color: #0069d9;
+        }
+
+        /* Стиль формы */
+        form {
+            width: 50%;
+            margin-top: 20px;
+        }
+
+        /* Стиль меток и полей ввода */
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[tupe="data"],
+        form input[type="email"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    </style>
+
+        <div>
+            @RenderBody()
+        </div>
+</body>
+</html>
